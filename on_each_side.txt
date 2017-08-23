@@ -1,0 +1,13 @@
+1
+	- filters
+2
+	- transforms
+3
+	- mask/clip path (origiai figure)
+4
+	- SVG
+5
+	-Canvas (perhaps a hicharts effect)
+6
+	- Loading bar
+	- pie loading bar!

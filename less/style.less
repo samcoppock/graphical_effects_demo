@@ -1,0 +1,78 @@
+body{
+    height:100vh;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  perspective: 1000px;
+  background-color: green;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  
+    #cube{ 
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform-origin:center center;
+        transform :rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px); //100px
+
+        figure {
+            margin: 0;
+            width: 500px;
+            height: 500px;
+            display: block;
+            position: absolute;
+            border: 0px;
+        }
+        
+        .front  { transform: rotateY(   0deg ) translateZ( 250px ); background-color: red; }
+        .back   { transform: rotateX( 180deg ) translateZ( 250px ); background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%);}
+        .right  { transform: rotateY(  90deg ) translateZ( 250px ); background-color: graytext;}
+        .left   { transform: rotateY( -90deg ) translateZ( 250px ); background-color: greenyellow;}
+        .top    { transform: rotateX(  90deg ) translateZ( 250px ); background-color: orange;}
+        .bottom { transform: rotateX( -90deg ) translateZ( 250px ); background: radial-gradient(ellipse at center, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);}
+    }
+    
+}
+
+
+#dockContainer{
+    width:100%;
+    height:auto;
+    position: fixed;
+    bottom: 0%;
+    text-align:center;
+    
+    #dock{
+        padding-top:5px;
+        padding-bottom:5px;
+
+        .icon{
+            width: 40px;
+            height: 40px;
+            cursor:pointer;
+            font-size: 35px;
+            margin-left: 5px;
+            margin-right: 5px;
+            display: inline-block;
+            transform-origin:center bottom;
+            transition: transform 0.5s, margin 0.5s
+        }
+
+        .iconHovered{
+            margin-left: 15px;
+            margin-right: 15px;
+            transform: scale(2,2);
+        }
+        
+        .iconSiblingHovered{
+            margin-left: 15px;
+            margin-right: 15px;
+            transform: scale(1.5,1.5);
+        }
+    }
+}

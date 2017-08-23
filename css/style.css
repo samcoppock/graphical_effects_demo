@@ -1,0 +1,103 @@
+body {
+  height: 100vh;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  background-color: green;
+  margin: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.container #cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+}
+.container #cube figure {
+  margin: 0;
+  width: 500px;
+  height: 500px;
+  display: block;
+  position: absolute;
+  border: 0px;
+}
+.container #cube .front {
+  -webkit-transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(250px);
+  background-color: red;
+}
+.container #cube .back {
+  -webkit-transform: rotateX(180deg) translateZ(250px);
+  transform: rotateX(180deg) translateZ(250px);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9de96), color-stop(44%, #8ab66b), to(#398235));
+  background: linear-gradient(to bottom, #c9de96 0%, #8ab66b 44%, #398235 100%);
+}
+.container #cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(250px);
+  transform: rotateY(90deg) translateZ(250px);
+  background-color: graytext;
+}
+.container #cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(250px);
+  transform: rotateY(-90deg) translateZ(250px);
+  background-color: greenyellow;
+}
+.container #cube .top {
+  -webkit-transform: rotateX(90deg) translateZ(250px);
+  transform: rotateX(90deg) translateZ(250px);
+  background-color: orange;
+}
+.container #cube .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(250px);
+  transform: rotateX(-90deg) translateZ(250px);
+  background: radial-gradient(ellipse at center, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+}
+#dockContainer {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0%;
+  text-align: center;
+}
+#dockContainer #dock {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#dockContainer #dock .icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 35px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transition: margin 0.5s, -webkit-transform 0.5s;
+  transition: margin 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, margin 0.5s;
+  transition: transform 0.5s, margin 0.5s, -webkit-transform 0.5s;
+}
+#dockContainer #dock .iconHovered {
+  margin-left: 15px;
+  margin-right: 15px;
+  -webkit-transform: scale(2, 2);
+  transform: scale(2, 2);
+}
+#dockContainer #dock .iconSiblingHovered {
+  margin-left: 15px;
+  margin-right: 15px;
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+}

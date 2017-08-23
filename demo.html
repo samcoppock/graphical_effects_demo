@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CSS animations demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/greensock-js/src/minified/TweenMax.min.js"></script>
+        <script src="js/greensock-js/src/minified/TimelineMax.min.js"></script>
+        <script src="js/greensock-js/src/minified/easing/EasePack.min.js"></script>
+        <script src="js/greensock-js/src/minified/easing/CustomEase.min.js"></script>
+        <script src="js/photon.js"></script>
+        <script src="js/animate.js"></script>
+        
+    </head>
+    <body>
+        <section class="container">
+            <div id="cube">
+                <figure class="front" >1</figure>
+                <figure class="back">2</figure>
+                <figure class="right">3</figure>
+                <figure class="left">4</figure>
+                <figure class="top">5</figure>
+                <figure class="bottom">6</figure>
+            </div>
+        </section>
+        
+        <div id="dockContainer">
+            <div id="dock">
+                <div class="icon fa fa-filter" onclick="rotateToFace(1)"></div>
+                <div class="icon fa fa-truck" onclick="rotateToFace(2)"></div>
+                <div class="icon fa fa-subway" onclick="rotateToFace(3)"></div>
+                <div class="icon fa fa-bath" onclick="rotateToFace(4)"></div>
+                <div class="icon fa fa-line-chart" onclick="rotateToFace(5)"></div>
+                <div class="icon fa fa-css3" onclick="rotateToFace(6)"></div>
+            </div>
+        </div>
+        
+        <div id="test" style="height:50px; width:50px; position:fixed; top:100px; left: 100px; background-color: red;" onclick="rotateToFace('blue')"></div>
+    </body>
+</html>
